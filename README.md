@@ -1,46 +1,163 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ** Pomodoro - Com tasks **
 
-## Available Scripts
+Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro, permite incluir tarefas, marcar como feito além de cronometrar o tempo do pomodoro de acordo com a tecnica.
 
-In the project directory, you can run:
+> ## Princípios
 
-### `npm start`
+* Single Responsibility Principle (SRP)
+* Open Closed Principle (OCP)
+* Liskov Substitution Principle (LSP)
+* Interface Segregation Principle (ISP)
+* Dependency Inversion Principle (DIP)
+* Separation of Concerns (SOC)
+* Don't Repeat Yourself (DRY)
+* You Aren't Gonna Need It (YAGNI)
+* Keep It Simple, Silly (KISS)
+* Composition Over Inheritance
+* Small Commits
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> ## Metodologias e Designs
 
-### `npm test`
+* TDD
+* Clean Architecture
+* DDD
+* Reactive Programming
+* Conventional Commits
+* GitFlow
+* Modular Design
+* Dependency Diagrams
+* Use Cases
+* Continuous Integration
+* Continuous Delivery
+* Continuous Deployment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> ## Bibliotecas e Ferramentas
 
-### `npm run build`
+* Typescript
+* React
+* React Testing Library
+* React Router DOM
+* Jest
+* Axios
+* Git
+* SASS + Animations
+* NPM
+* Faker
+* Lint Staged
+* Eslint
+* Standard Javascript Style
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> ## Features do React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Functional Components
+* UseState
+* UseContext
+* UseEffect
+* UseHistory
+* UseRef
+* Custom Hooks
+* Router
+* Memo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> ## Features do Git
 
-### `npm run eject`
+* Alias
+* Log Personalizado
+* Branch
+* Reset
+* Amend
+* Tag
+* Tag Anotada
+* Stash
+* Rebase
+* Merge
+* Add
+* Commit
+* Push
+* Pull
+* Shortlog
+* Status
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> ## Features do Typescript
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* POO Avançado
+* Interface
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> ## Status
+🚧  🚀 Em construção...  🚧
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> ### Features
+- [x] Estrutura de diretórios
+- [x] Arquivo ReadMe
+- [ ] Inclusão de tema light/dark
+- [ ] Outros
+- [ ] Outros
+- [ ] Outros
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+> ### Demonstração 
+
+🚧   🚀 Em construção...  🚧   
+
+
+> ### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+
+> ### Pré-requisitos
+
+Antes de iniciar instale:
+
+- [ReactJs](https://nodejs.org/en/)
+
+NodeJS
+
+Npm 
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Rodando
+
+```bash
+# Clone este repositório
+$ git clone 
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd pasta
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
+
+
+## Instalação
+
+
+
+### Outras Dependencias
+
+React-Router-Dom   
+npm install @types/react-router-dom
+More (https://reactrouter.com/web/guides/quick-start)
+
+
+# Autor   
+
+Kátia Cibele 🚀❤️👋🏽 
+Entre em contato!
