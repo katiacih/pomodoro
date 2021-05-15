@@ -40,51 +40,20 @@ Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro,
 * React Testing Library
 * React Router DOM
 * Jest
-* Axios
 * Git
-* SASS + Animations
 * NPM
-* Faker
-* Lint Staged
-* Eslint
-* Standard Javascript Style
 
 > ## Features do React
 
 * Functional Components
 * UseState
-* UseContext
 * UseEffect
-* UseHistory
-* UseRef
-* Custom Hooks
 * Router
-* Memo
-
-> ## Features do Git
-
-* Alias
-* Log Personalizado
-* Branch
-* Reset
-* Amend
-* Tag
-* Tag Anotada
-* Stash
-* Rebase
-* Merge
-* Add
-* Commit
-* Push
-* Pull
-* Shortlog
-* Status
 
 > ## Features do Typescript
 
 * POO Avançado
 * Interface
-
 
 > ## Status
 🚧  🚀 Em construção...  🚧
@@ -93,19 +62,17 @@ Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro,
 > ### Features
 - [x] Estrutura de diretórios
 - [x] Arquivo ReadMe
-- [ ] Inclusão de tema light/dark
-- [ ] Outros
-- [ ] Outros
-- [ ] Outros
+- [x] Inclusão de tema light/dark
+- [x] Componentes
+- [ ] Responsividade
+- [ ] Tasks
+- [ ] Gerenciador de estados
+- [ ] Cronometro do pomodoro
 
 
 > ### Demonstração 
 
 🚧   🚀 Em construção...  🚧   
-
-
-
-
 
 > ### 🛠 Tecnologias
 
@@ -149,15 +116,8 @@ $ npm start
 ```
 
 
-## Instalação
-
-
 
 ### Outras Dependencias
-
-React-Router-Dom   
-npm install @types/react-router-dom
-More (https://reactrouter.com/web/guides/quick-start)
 
 RecoilJs
 npm install recoil
