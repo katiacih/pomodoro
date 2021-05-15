@@ -104,6 +104,9 @@ Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro,
 🚧   🚀 Em construção...  🚧   
 
 
+
+
+
 > ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -156,8 +159,11 @@ React-Router-Dom
 npm install @types/react-router-dom
 More (https://reactrouter.com/web/guides/quick-start)
 
+RecoilJs
+npm install recoil
+More (https://recoiljs.org/)
+
 
 # Autor   
 
-Kátia Cibele 🚀❤️👋🏽 
-Entre em contato!
+Kátia Cibele 🚀
