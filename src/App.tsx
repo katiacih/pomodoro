@@ -3,7 +3,7 @@ import Header from './components/header'
 import Button from 'components/button'
 import ToggleCustom  from 'components/toggleCustom/toggleCustom';
 import ComoFunciona from 'pages/ComoFunciona';
-import Tasks from 'pages/Tasks';
+import Tasks from './pages/tasks';
 import 'App.css';
 
 function App() {
