@@ -3,13 +3,18 @@
 button {
   padding: 8px 18px;
   border-radius: 5px;
+  
   color: #fff;
   cursor: pointer;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .btnPrimary {
   background-color: var(--primary-color);
   color: var(--text-color-white);
+  border: none;
 }
 
 .btnPrimary:hover {
@@ -27,6 +32,7 @@ button {
 .btnSecondary {
   background-color: var(--secondary-color);
   color: var(--text-color-white);
+  border: none;
 }
 
 .btnSecondary:hover {

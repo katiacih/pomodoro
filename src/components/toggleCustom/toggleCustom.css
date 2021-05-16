@@ -45,7 +45,7 @@ label {
 }
 
 .toggle:checked {
-  border-color: #654FEC;
+  border-color: var(--text-color-white-light);
 }
 
 .toggle:checked:after {
