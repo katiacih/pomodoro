@@ -14,7 +14,7 @@ code {
 
 :root {
   --primary-color:#5200FF;
-  --primary-color-light: #4C12EF;
+  --primary-color-light: #4d12efa8;
   --primary-color-dark: #5F13FF;
 
   --secondary-color:#D81B60;
@@ -25,6 +25,10 @@ code {
   --text-color-white: #ffff;
   --text-color-pink: #D81B60;
   --text-color-pink-light: #FF5C8D;
+  --text-color-gray: #a09e9e;
+
+  --bg-white: #fff;
+  
 
   --disabled: #E5E5E5;
   --text-disabled: #727272;
