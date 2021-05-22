@@ -13,6 +13,7 @@ input[type="checkbox"] :focus {
 .toggleContent {
   display: flex;
   align-items: center;
+
 }
 
 label {
@@ -52,5 +53,21 @@ label {
   transform: translatex(20px);
 }
     
-    
+.moon {
+  font-size: 24px;
+  color: #e6e4e4;
+}
 
+.sun {
+  font-size: 24px;
+  color: #f3f364;
+}
+
+.btnIcon {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.btnIcon:first-of-type {
+  margin-right: 4px;
+}
