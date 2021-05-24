@@ -6,12 +6,7 @@
   align-items: center;
 }
 
-.header h1 {
-  margin: 0px;
-  color: var(--text-color-white-light);
-}
-
-.header h5 {
+.subtitle{
   color: var(--text-color-white-light);
   margin: 0px;
 }

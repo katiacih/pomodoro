@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import Card from '../components/card';
-import Button from '../components/button'
+import Card from '../../components/card';
+import Button from '../../components/buttons/button'
+import TextArea  from 'components/text-area/text-area';
 import './tasks.css'
+import { useSetRecoilState } from 'recoil';
+import { todoListState } from 'atoms/atoms';
+import { Todo } from '../../model/model'
+import { ListTodo } from './list-todo';
 
-type TaskProps = {
-  descricao: string
-  isCompleted: boolean
-}
 
 const t = [
   {
@@ -25,13 +26,26 @@ const t = [
  
 const Tasks: React.FC = () => {
   const [newTask, setNewTask] = useState('')
-  const [tasks, setTasks] = useState<TaskProps[]>(t)
+  const setListTodo = useSetRecoilState(todoListState)
+  let id = 0;
+
+  const getId = (): number => {
+    return id++;
+  }
+
 
   const onChangeNewTask = (evt: React.ChangeEvent<HTMLInputElement>): void => {
     setNewTask(evt.target.value)
   }
 
   const addNewTask = (): void => {
+    const n =  {
+      id: getId(),
+      description: newTask,
+      isCompleted: false,
+    };
+    setListTodo( prev => [...prev, n]);
+    setNewTask('');
     
   }
 
@@ -42,29 +56,17 @@ const Tasks: React.FC = () => {
   return (
     <Card>
       <div className='header'>
-        <h2>Tasks</h2>
+        <h3>Tasks</h3>
         <p>Inclua suas tarefas para melhorar aproveitamento.</p>
-
       </div>
-
-      <input value={newTask} onChange={ evt => onChangeNewTask(evt)}/>
+      <TextArea value={newTask} onChange={onChangeNewTask}/>
+    
       <div className="addtasks">
         <Button label="Add Task" onClick={() => addNewTask()}
           />
       </div>
 
-      <div className='listaTasks'>
-        <h3>Tasks Finalizadas: {getTasksFinalizadas()}</h3>
-
-        <ul>
-          { tasks.map((item) => 
-             <li>{item.descricao}</li>
-            )
-            }
-        </ul>
-
-
-      </div>
+      <ListTodo/>
 
     </Card>
   );

@@ -1,4 +1,4 @@
-input[type="checkbox"] {
+.toggleContent input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -6,7 +6,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-input[type="checkbox"] :focus {
+.toggleContent input[type="checkbox"] :focus {
     outline: 0
 }
 
@@ -16,7 +16,7 @@ input[type="checkbox"] :focus {
 
 }
 
-label {
+.toggleContent label {
   margin-right: 10px;
   color: var(--text-color-white-light);
 }
@@ -60,7 +60,7 @@ label {
 
 .sun {
   font-size: 24px;
-  color: #f3f364;
+  color: #e2e20b;
 }
 
 .btnIcon {

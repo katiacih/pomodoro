@@ -1,0 +1,22 @@
+
+.contentBlank {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #eae5e5;
+  color: var(--text-disabled);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.contentBlank p {
+  color: var(--text-disabled);
+  font-size: 11px;
+}
+
+.contentBlank svg {
+  font-size: 36px;
+}

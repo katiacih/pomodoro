@@ -8,13 +8,10 @@ type Props = {
 const Header: React.FC<Props> = ({ actions }: Props) => {
   return (
     <div className="headerContent">
-        <div className="header">
-          <h1>Pomodoro</h1>
-          <h5>Use a técnica pomodoro para estudar de forma eficiente.</h5>
-        </div>
-        <div className="headerActions">
-          {actions}
-        </div>
+      <h5 className="subtitle">Use a técnica pomodoro para estudar de forma eficiente.</h5>
+      <div className="headerActions">
+        {actions}
+      </div>
       </div>
   );
 }

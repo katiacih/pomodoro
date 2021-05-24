@@ -9,21 +9,37 @@ html, body {
 }
 
 .themeLight {
-  background: linear-gradient(0deg, rgba(248,156,92,1) 5%, rgba(210,11,84,1) 50%);
+  background: linear-gradient(90deg, rgba(242,112,156,1) 12%, rgba(255,148,114,1) 53%);
 }
 
 .themeDark {
-  background: linear-gradient(0deg, rgba(210,11,84,1) 12%, rgba(0,0,0,1) 53%);
+  background: linear-gradient(0deg, rgba(100,44,71,1) 12%, rgba(15,32,39,1) 53%);
 }
 
 .actionThemeContent {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.titlePomodoro {
+  margin: 0px;
+  font-size: 24px;
+  color: var(--text-color-white-light);
+}
+
+
+.contentTaskTimer {
+  display: flex;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 600px){
   .App {
     padding: 16px 18px;
+  }
+  .contentTaskTimer {
+    flex-direction: column;
   }
 }
 

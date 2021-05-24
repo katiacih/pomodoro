@@ -1,7 +1,8 @@
+import { Todo } from './../model/model';
 import { atom }  from 'recoil'
 
 
-const todoListState = atom({
+export const todoListState = atom({
   key: 'todoListState',
-  default: []
+  default:[] as Todo[],
 })

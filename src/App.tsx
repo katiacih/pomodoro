@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Header from './components/header'
-import Button from 'components/button'
-import ToggleCustom  from 'components/toggleCustom/toggleCustom';
+import Button from 'components/buttons/button'
+import ToggleCustom  from 'components/buttons/toggleCustom';
 import ComoFunciona from 'pages/ComoFunciona';
-import Tasks from './pages/tasks';
+import Tasks from './pages/task/tasks';
+import Timer from './pages/timer';
+import { RecoilRoot } from 'recoil';
 import 'App.css';
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
     <div className={["App",
         isThemeLight ? "themeLight": "themeDark"].join(' ')}>
       <div className="actionThemeContent">
+        <h2 className="titlePomodoro">Pomodoro</h2>
         <ToggleCustom
           value={isThemeLight} 
           onChange={onChangeTheme}
@@ -40,7 +43,13 @@ function App() {
        } />
       {
         isPagePomodoroActive
-          ? <Tasks />
+          ? <div className='contentTaskTimer'>
+            <RecoilRoot>
+              <Tasks />
+              <Timer/>
+
+            </RecoilRoot>
+            </div>
           : <ComoFunciona/>
       }
       
