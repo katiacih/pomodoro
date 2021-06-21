@@ -10,13 +10,18 @@ h2, p {
 .header {
   margin-bottom: 18px;
 }
-.header h3 {
+.header h4 {
   margin: 0px;
+}
+
+.header p {
+  font-size: 10px;
 }
 
 .addtasks {
   display: flex;
   justify-content: flex-end;
+  margin-top: 4px;
 }
 
 .listaTasks {

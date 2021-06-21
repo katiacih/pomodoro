@@ -1,8 +1,17 @@
 
+.content {
+  display: flex;
+  padding: 8px 4px;
+  border: 1px solid var(--secondary-color);
+  justify-content: space-between;
+}
+
 
 .total {
   background-color: #FAE4E7;
   color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 500;
   padding: 12px 4px;
   margin: 8px 0px;
 }
@@ -35,12 +44,13 @@
 .item-1 {
   display: flex;
   position: relative;
+  align-items: center;
 }
 
 .item-1 label {
   color: '#000000';
-  margin-left: 10px;
   font-weight: 600;
+  font-size: 12px;
 }
 
 .item-2 {
@@ -52,10 +62,17 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.item-2 button:hover {
+  background-color: aquamarine;
+  color: var(--text-color-pink-light);
 }
 
 .item-2 svg {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from '../components/card';
 import Button from '../components/buttons/button'
 import './timer.css'
+import Checkbox from 'components/buttons/checkbox';
 
 type TaskProps = {
   descricao: string
@@ -42,7 +43,7 @@ const Timer: React.FC = () => {
   return (
     <Card>
       <div className='header'>
-        <h2>Timer</h2>
+        <h4>Timer</h4>
 
       </div>
 

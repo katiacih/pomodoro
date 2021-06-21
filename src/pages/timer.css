@@ -15,6 +15,22 @@ h2, p {
   justify-content: flex-end;
 }
 
+h2, p {
+  margin: 0px;
+}
+
+.header p {
+  color: var(--text-color-gray);
+  font-size: 11px;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+.header h4 {
+  margin: 0px;
+}
+
 .listaTasks {
   
 }
