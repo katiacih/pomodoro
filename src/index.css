@@ -5,6 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h1, h2, h3, h4 , h5 , h6, p {
+  font-family:  'Roboto', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
 code {
@@ -28,8 +45,7 @@ code {
   --text-color-gray: #a09e9e;
 
   --bg-white: #fff;
-  
-
+ 
   --disabled: #E5E5E5;
   --text-disabled: #727272;
  }

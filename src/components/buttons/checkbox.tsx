@@ -2,20 +2,24 @@ import React from 'react';
 import './checkbox.css'
  
 type Props = {
+  identificador: number
   checked: boolean
-  onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void
+  onChange: (value: boolean, identificador: number) => void
 }
 
-const Checkbox: React.FC<Props> = ({checked, onChange}: Props) => {
+const Checkbox: React.FC<Props> = ({ checked, identificador, onChange }: Props) => {
+  const onChangeCheckbox = (): void => {
+    console.log('this is checked')
+    onChange(!checked, identificador)
+  }
   return (
-    // <label className="container">
-    //   {checked}
-    //   <input type='checkbox' checked={checked} />
-    //   <span className="checkmark"></span>
-    // </label>
-    <input className='check1' type="checkbox"
-      onChange={evt => onChange(evt)}
-      checked={checked} />
+    <label className="container">
+      <input onChange={() => onChangeCheckbox()}
+        type="checkbox"
+        checked={checked} />
+      <span className="checkmark"></span>
+
+    </label>
   );
 }
 export default Checkbox;

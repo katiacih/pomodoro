@@ -9,6 +9,7 @@
 .subtitle{
   color: var(--text-color-white-light);
   margin: 0px;
+  font-size: 10px;
 }
 
 .headerActions {

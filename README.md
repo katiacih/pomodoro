@@ -4,33 +4,34 @@
 Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro, permite incluir tarefas, marcar como feito além de cronometrar o tempo do pomodoro de acordo com a tecnica.
 
 
-> ## Bibliotecas e Ferramentas
+## Bibliotecas e Ferramentas
 
 * Typescript
 * React
-* Git
 * NPM
 
-> ## Status
+## Status
 🚧  🚀 Em construção...  🚧
 
 
-> ### Features
+### Features
 - [x] Estrutura de diretórios
 - [x] Arquivo ReadMe
 - [x] Inclusão de tema light/dark
 - [x] Componentes
+- [ ] Testes unitários
 - [ ] Responsividade
 - [ ] Tasks
 - [ ] Gerenciador de estados
 - [ ] Cronometro do pomodoro
+- [ ] Testes de integração
 
 
-> ### Demonstração 
+### Demonstração 
 
 🚧   🚀 Em construção...  🚧   
 
-> ### 🛠 Tecnologias
+### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -39,7 +40,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [TypeScript](https://www.typescriptlang.org/)
 
 
-> ### Pré-requisitos
+### Pré-requisitos
 
 Antes de iniciar instale:
 
