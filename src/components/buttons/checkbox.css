@@ -1,19 +1,9 @@
-.check1 {
-  width: 18px;
-  height: 18px;
-  border-radius: 2px;
-  border: 1px solid var(--secondary-color);
-  cursor: pointer;
-}
-
-
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 28px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -32,17 +22,18 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  height: 18px;
+  width: 18px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
 }
 
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: var(--text-color-white-light);
 }
 
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: var(--secondary-color);
 }
 
 .checkmark:after {
@@ -51,18 +42,17 @@
   display: none;
 }
 
-
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
 .container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: 7px;
+  top: 3px;
+  width: 3px;
+  height: 8px;
   border: solid white;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);

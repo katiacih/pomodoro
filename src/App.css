@@ -18,14 +18,17 @@
   margin-bottom: 30px;
 }
 
+.contentTaskTimer {
+  display: flex;
+}
+.contentTaskTimer:first-child {
+  margin-right: 12px;
+}
+
 .titlePomodoro {
   margin: 0px;
   font-size: 24px;
   color: var(--text-color-white-light);
-}
-
-  display: flex;
-  justify-content: space-between;
 }
 
 @media only screen and (max-width: 600px){

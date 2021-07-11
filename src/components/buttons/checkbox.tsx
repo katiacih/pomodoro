@@ -3,22 +3,20 @@ import './checkbox.css'
  
 type Props = {
   identificador: number
+  name: string
   checked: boolean
+  label?: string
   onChange: (value: boolean, identificador: number) => void
 }
 
-const Checkbox: React.FC<Props> = ({ checked, identificador, onChange }: Props) => {
+const Checkbox: React.FC<Props> = ({ checked, identificador, name, label, onChange }: Props) => {
   const onChangeCheckbox = (): void => {
-    console.log('this is checked')
     onChange(!checked, identificador)
   }
   return (
-    <label className="container">
-      <input onChange={() => onChangeCheckbox()}
-        type="checkbox"
-        checked={checked} />
+    <label className="container">One
+      <input type="checkbox"  />
       <span className="checkmark"></span>
-
     </label>
   );
 }

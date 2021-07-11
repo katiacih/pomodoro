@@ -15,7 +15,7 @@ const ToggleCustom: React.FC<Props> = ({ value, disabled = false, onChange}: Pro
       <input
         onClick={() => onChange(!value)}
         disabled={disabled}
-        checked={value}
+        defaultChecked={value}
         type="checkbox"
         name="checkbox"
         className="toggle" />

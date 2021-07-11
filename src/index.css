@@ -1,3 +1,8 @@
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family:  'Roboto', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,7 +18,7 @@ body {
 	vertical-align: baseline;
 }
 
-h1, h2, h3, h4 , h5 , h6, p {
+h1, h2, h3, h4 , h5 , h6, p, label {
   font-family:  'Roboto', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
@@ -31,8 +36,8 @@ code {
 
 :root {
   --primary-color:#5200FF;
-  --primary-color-light: #4d12efa8;
-  --primary-color-dark: #5F13FF;
+  --primary-color-light: #5F13FF;
+  --primary-color-dark: #2D01A7;
 
   --secondary-color:#D81B60;
   --secondary-color-light: #F5C5CC;
@@ -45,6 +50,8 @@ code {
   --text-color-gray: #a09e9e;
 
   --bg-white: #fff;
+
+  --bg-black: #0000;
  
   --disabled: #E5E5E5;
   --text-disabled: #727272;

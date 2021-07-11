@@ -1,0 +1,17 @@
+
+.iconButton {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.iconButton:hover {
+  color: var(--text-color-pink-light);
+}
+
+.iconButton svg {
+  font-size: 24px;
+}

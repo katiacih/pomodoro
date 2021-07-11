@@ -4,7 +4,7 @@ import Button from 'components/buttons/button'
 import ToggleCustom  from 'components/buttons/toggleCustom';
 import ComoFunciona from 'pages/ComoFunciona';
 import Tasks from './pages/task/tasks';
-import Timer from './pages/timer';
+import ContentTimer from './pages/content-timer/content-timer';
 import { RecoilRoot } from 'recoil';
 import 'App.css';
 
@@ -43,13 +43,13 @@ function App() {
        } />
       {
         isPagePomodoroActive
-          ? <div className='contentTaskTimer'>
+          ?
             <RecoilRoot>
-              <Tasks />
-              <Timer/>
-
+              <div className='contentTaskTimer'>
+                <Tasks />
+                <ContentTimer/>
+              </div>
             </RecoilRoot>
-            </div>
           : <ComoFunciona/>
       }
       

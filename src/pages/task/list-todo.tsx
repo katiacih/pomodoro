@@ -5,6 +5,7 @@ import { BiTrash } from 'react-icons/bi';
 import Checkbox from '../../components/buttons/checkbox'
 import { Todo } from 'model/model';
 import { getTasksDB, setTasksDB } from 'model/util';
+import IconButton from 'components/buttons/icon-button';
 
 
 export const ListTodo: React.FC = () => {
@@ -30,15 +31,19 @@ export const ListTodo: React.FC = () => {
    
   }
 
-  const getTasks = (): void => {
-    let listaTasks = getTasksDB();
-    //paginar
-    setTotalItens(listaTasks.length)
-    setTasks(listaTasks.splice((paginaAtual - 1) * ITENS_POR_PAG, ITENS_POR_PAG ))
+
+
+  const onClickRemover = (): void => {
+
   }
 
-
   useEffect(() => {
+    const getTasks = (): void => {
+      let listaTasks = getTasksDB();
+      //paginar
+      setTotalItens(listaTasks.length)
+      setTasks(listaTasks.splice((paginaAtual - 1) * ITENS_POR_PAG, ITENS_POR_PAG ))
+    }
     getTasks();
   }, []);
 
@@ -50,15 +55,14 @@ export const ListTodo: React.FC = () => {
         tasks.length > 0 
       ?
       tasks.map((item) => (
-        <div className="content" key={item.id}>
-          <div className="item-1" style={{ display: 'flex' }}>
-            <Checkbox identificador={item.id} onChange={onChangeMark} checked={item.isCompleted} />
-            <label> {item.description}</label>
-          </div>
+        <div className="cell" key={item.id}>
+          <Checkbox
+            identificador={item.id}
+            name={`item${item.id}`}
+            onChange={onChangeMark}
+            checked={item.isCompleted} />
           <div className="item-2">
-            <button>
-              <BiTrash/>
-            </button>
+            <IconButton icon={<BiTrash/>} onClick={onClickRemover} />
           </div>
           
         </div>

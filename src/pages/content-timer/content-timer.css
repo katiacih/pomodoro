@@ -31,6 +31,12 @@ h2, p {
   margin: 0px;
 }
 
+.content-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .listaTasks {
   
 }
