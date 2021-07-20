@@ -1,5 +1,8 @@
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 # Pomodoro - Com tasks 
+
+
 
 Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro, permite incluir tarefas, marcar como feito além de cronometrar o tempo do pomodoro de acordo com a tecnica.
 
