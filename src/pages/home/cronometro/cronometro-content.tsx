@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Card from '../../components/card';
-import Button from '../../components/buttons/button'
-import './content-timer.css'
-import Checkbox from 'components/buttons/checkbox';
+// import Card from '../../components/card/card';
+import Button from '../../../components/buttons/button'
+import './cronometro-content.css'
+// import Checkbox from 'components/buttons/checkbox';
 import Alert from 'components/alert/alert';
-import Cronometro from 'components/cronometro/cronometro'
+import Cronometro from './components/cronometro'
 
 type TaskProps = {
   descricao: string
@@ -26,26 +26,35 @@ const t = [
   }
 ]
  
-const ContentTimer: React.FC = () => {
-  const [newTask, setNewTask] = useState('')
-  const [tasks, setTasks] = useState<TaskProps[]>(t)
+const CronometroContent: React.FC = () => {
+  // const [newTask, setNewTask] = useState('')
+  // const [tasks, setTasks] = useState<TaskProps[]>(t)
   const [stateTimer, setStateTimer] = useState<'Play' | 'Stop' | 'Pause' | 'Restart'>('Stop')
   const [stateLabel, setStateLabel] = useState<'Em descanso' | `Let's Bora!!` >('Em descanso')
 
-  const onChangeNewTask = (evt: React.ChangeEvent<HTMLInputElement>): void => {
-    setNewTask(evt.target.value)
-  }
+  // const onChangeNewTask = (evt: React.ChangeEvent<HTMLInputElement>): void => {
+  //   setNewTask(evt.target.value)
+  // }
 
-  const addNewTask = (): void => {
+  // const addNewTask = (): void => {
     
+  // }
+
+  // const getTasksFinalizadas = (): number => {
+  //   return 1;
+  // }
+
+
+  const actionPlay = (): void => {
+
   }
 
-  const getTasksFinalizadas = (): number => {
-    return 1;
+  const actionPause = (): void => {
+
   }
 
   return (
-    <Card>
+    <>
       <div className='header'>
         <h4>Timer</h4>
         <div className="content content-timer">
@@ -57,12 +66,13 @@ const ContentTimer: React.FC = () => {
             order={'Crescente'} />
         </div>
         <div className="actions">
-          <Button onClick={()=> {}} label={'Play'} variant='default'/>
+          <Button onClick={actionPlay} className='marginRightLg' label={'Play'} variant='secondary'/>
+          <Button onClick={actionPause} label={'Pause'} variant='outline'/>
         </div>
         <Alert variant='success' isShow={true} title='Titulo' description='Esta descricao é para ver' />
       </div>
 
-    </Card>
+    </>
   );
 }
-export default ContentTimer;
+export default CronometroContent;

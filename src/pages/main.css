@@ -15,6 +15,12 @@
   background: linear-gradient(0deg, rgba(100,44,71,1) 12%, rgba(15,32,39,1) 53%);
 }
 
+.contentTaskTimer {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
 .tasks {
   margin-right: 60px;
 }

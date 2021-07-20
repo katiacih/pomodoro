@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs'
-import './toggleCustom.css';
+import './toggle-custom.css';
 
 type Props = {
   value: boolean

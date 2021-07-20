@@ -1,6 +1,7 @@
 
 .inputContent {
-display: flex;
+  display: flex;
+  flex-direction: column;
 }
 
 .inputContent input {
@@ -16,4 +17,10 @@ display: flex;
 .inputContent input:focus, input:focus-within{
   border: solid 2px #ff5c8d;
   outline: none;
+}
+
+.inputContent span {
+  color: rgb(156, 35, 35);
+  margin-left: 4px;
+  font-size: 11px;
 }

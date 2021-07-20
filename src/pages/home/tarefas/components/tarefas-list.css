@@ -1,9 +1,15 @@
 
+.content-list-tarefa {
+  overflow: auto;
+  height: 300px;
+}
+
 .cell {
   display: flex;
-  padding: 18px 14px;
+  padding: 8px 12px;
   border: 1px solid var(--secondary-color);
   justify-content: space-between;
+  align-items: center;
 }
 
 

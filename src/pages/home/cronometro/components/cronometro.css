@@ -35,7 +35,7 @@
 }
 
 .timer .hand span {
-  border: 24px solid var(--secondary-color-dark);
+  border: var(--spacing-lg) solid var(--secondary-color-dark);
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-radius: 50%;
@@ -103,13 +103,14 @@
 
 .face h2 {
   font-weight: 300;
+  font-size: 24px;
   color: var(--secondary-color-dark);
   margin-top: 24px;
 }
 
 .face p {
   border-radius: 20px;
-  font-size: 100px;
+  font-size: min(60px, 10vw);
   color: var(--secondary-color-dark);
   font-weight: 400;
   font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -141,4 +142,36 @@
   100% {
     transform: rotate(405deg);
   }
+}
+
+/* TODO media queries para relogio */
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  .timer-group {
+    height: 300px;
+    width: 300px;
+    background-color: #FAE042;
+  }
+
+  .timer {
+    height: 80px;
+    width: 80px;
+  }
+
+  .timer:after {
+    background: rgb(192, 60, 60);
+    height: 60px;
+    width: 60px;
+  }
+
+  .timer.minute {
+    height: 220px;
+    left: 25px;
+    width: 220px;
+    top: 25px;
+  }
+
+  
+  
+  
 }

@@ -37,6 +37,9 @@ h2, p {
   align-items: center;
 }
 
-.listaTasks {
-  
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
