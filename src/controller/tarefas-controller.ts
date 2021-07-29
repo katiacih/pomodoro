@@ -41,8 +41,7 @@ export const removeTaskLocalStorage = (taskId: number): Task[]=> {
 
 export const setTaskStatusLocalStorage = (taskId: number, isCompleted: boolean): Task[] => {
   let tasks: Task[] = getTasksLocalStorage()
-  tasks = tasks.filter((item) => item.id === taskId
-    ? item.isCompleted = isCompleted : item)
+  tasks =  tasks.map((item) => ( item.id === taskId ?  { id: item.id, description: item.description, isCompleted: isCompleted } : item ))
   setTasksLocalStorage(tasks)
   return tasks
 }

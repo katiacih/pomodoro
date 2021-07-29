@@ -18,7 +18,6 @@ export const TarefasList: React.FC = () => {
   }
 
   const onClickRemover = (identificador: number): void => {
-    console.log('chegous', identificador)
     setTasks(removeTaskLocalStorage(identificador))
   }
 
