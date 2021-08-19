@@ -1,5 +1,5 @@
 import React from 'react';
-import './text-area.css';
+import './text-field.css';
 
 type Props = {
   value: string
@@ -7,7 +7,7 @@ type Props = {
   msgError?: string
 }
 
-const TextArea: React.FC<Props> = ({value, onChange, msgError = ''}: Props) => {
+const TextField: React.FC<Props> = ({value, onChange, msgError = ''}: Props) => {
   return (
     <div className="inputContent">
       <input value={value} onChange={ evt => onChange(evt)}/>
@@ -18,4 +18,4 @@ const TextArea: React.FC<Props> = ({value, onChange, msgError = ''}: Props) => {
     </div>
   );
 }
-export default TextArea;
+export default TextField;
