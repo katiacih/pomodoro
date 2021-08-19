@@ -23,7 +23,7 @@ const Main: React.FC = () => {
   const onChangeTheme = (value: boolean): void => {
     setTheme({
       ...theme,
-      type: 'dark'
+      type: value === true ? 'light' : 'dark'
     })
     setIsThemeLight(value)
   }

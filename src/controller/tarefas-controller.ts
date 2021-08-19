@@ -33,7 +33,6 @@ export const addTaskLocalStorage = (newTask: string): Task[] => {
 
 export const removeTaskLocalStorage = (taskId: number): Task[]=> {
   let tasks: Task[] = getTasksLocalStorage()
-  console.log('is removendo', taskId)
   tasks = tasks.filter(tarefa => tarefa.id !== taskId)
   setTasksLocalStorage(tasks)
   return tasks
