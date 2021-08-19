@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../../../components/buttons/button'
-import TextArea  from 'components/text-area/text-area';
+import TextField  from 'components/text-field/text-field';
 import './tarefas.css';
 import { TarefasList } from './components/tarefas-list';
 import { addTaskLocalStorage, getTasksLocalStorage } from '../../../controller/tarefas-controller'
@@ -9,7 +9,7 @@ import { taskListState } from '../../../atoms/atoms'
  
 const Tarefas: React.FC = () => {
   const [newTask, setNewTask] = useState('')
-  const [_, setTasks] = useRecoilState(taskListState)
+  const [, setTasks] = useRecoilState(taskListState)
   const [errorText, setErrorText] = useState('')
 
 
@@ -34,15 +34,14 @@ const Tarefas: React.FC = () => {
       setTasks(listaTasks)
     }
     getTasks();
-  }, []);
-
+  }, [setTasks]);
   return (
     <>
       <div className='header'>
-        <h4>Tarefas</h4>
+        <h3>Tarefas</h3>
         <p>Inclua suas tarefas para um melhor aproveitamento.</p>
       </div>
-      <TextArea value={newTask} onChange={onChangeNewTask} msgError={errorText}/>
+      <TextField value={newTask} onChange={onChangeNewTask} msgError={errorText}/>
     
       <div className="addtasks">
         <Button label="Adicionar Tarefas" onClick={() => addNewTask()}
