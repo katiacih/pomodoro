@@ -1,75 +1,100 @@
-import React, { useState } from 'react';
-// import Card from '../../components/card/card';
-import Button from '../../../components/buttons/button'
+import React, { useState, useCallback } from 'react';
+import { ComboBox } from 'components/combo-box/combo-box'
 import './cronometro-content.css'
-// import Checkbox from 'components/buttons/checkbox';
-import Alert from 'components/alert/alert';
-import Cronometro from './components/cronometro'
+import Button from 'components/buttons/button'
+import CircleTimer from './components/circle-timer'
 
-type TaskProps = {
-  descricao: string
-  isCompleted: boolean
-}
-
-const t = [
-  {
-    descricao: 'Corrigir exercicios',
-    isCompleted: false
-  },
-  {
-    descricao: 'Estudar javascript',
-    isCompleted: false
-  },
-  {
-    descricao: 'Criar banners',
-    isCompleted: false
-  }
-]
- 
 const CronometroContent: React.FC = () => {
-  // const [newTask, setNewTask] = useState('')
-  // const [tasks, setTasks] = useState<TaskProps[]>(t)
-  const [stateTimer, setStateTimer] = useState<'Play' | 'Stop' | 'Pause' | 'Restart'>('Stop')
-  const [stateLabel, setStateLabel] = useState<'Em descanso' | `Let's Bora!!` >('Em descanso')
 
-  // const onChangeNewTask = (evt: React.ChangeEvent<HTMLInputElement>): void => {
-  //   setNewTask(evt.target.value)
-  // }
-
-  // const addNewTask = (): void => {
-    
-  // }
-
-  // const getTasksFinalizadas = (): number => {
-  //   return 1;
-  // }
-
+  const [stateDuracao, SetStateDuracao] = useState({
+    value: '1',
+    label: '25 minutos'
+  })
+  const [stateTimerOperacao, setStateTimerOperacao] = useState<'Play' | 'Stop' | 'Pause' | 'Restart'>('Stop')
+  const [stateTimer, setStateTimer] = useState({
+    min: 25,
+    sec: 0
+  })
 
   const actionPlay = (): void => {
-
+    setStateTimerOperacao('Play')
+    
+  }
+  const actionPause = (): void => {
+    setStateTimerOperacao('Pause')
   }
 
-  const actionPause = (): void => {
+  const actionStop = (): void => {
+    setStateTimerOperacao('Stop')
+    
+    setStateTimer({
+      min: stateDuracao.value === '1' ? 25 
+      : stateDuracao.value === '2' ? 15
+      : 5,
+      sec: 0
+    })
+  }
 
+  const resetar = (): void => {
+    onChangeDuracao('25 minutos', '1')
+  }
+
+  const atualizaDuracao = useCallback((optionLabel: string, optionValue: string): void => onChangeDuracao(optionLabel, optionValue), [])
+
+
+  const onChangeDuracao = (optionLabel: string, optionValue: string)=> {
+    SetStateDuracao({ label: optionLabel, value: optionValue })
+
+    if(optionValue === '1') setStateTimer({
+      min: 25,
+      sec: 0
+    })
+    if(optionValue === '2') setStateTimer({
+      min: 15,
+      sec: 0
+    })
+    if(optionValue === '3') setStateTimer({
+      min: 5,
+      sec: 0
+    })
   }
 
   return (
     <>
       <div className='header'>
-        <h4>Timer</h4>
-        <div className="content content-timer">
-          <Cronometro
-            minuteInit={0}
-            secondInit={0}
-            label={stateLabel}
-            timerState={stateTimer}
-            order={'Crescente'} />
+        <div className="content">
+          <section className="action-top">
+            <ComboBox 
+              key="comboBox"
+              options={[
+                {label: '25 minutos', value: '1'},
+                {label: '15 minutos', value: '2'},
+                {label: '5 minutos', value: '3'}
+              ]}
+              onChangeOption={atualizaDuracao}
+              className="action-top-select"
+              valueSelected={stateDuracao.value}
+            />
+            <Button label="Resetar" 
+              onClick={resetar}
+              variant={'link'}
+            />
+          </section>
+          <section className="content-timer">
+            <CircleTimer  
+              min={stateTimer.min} 
+              operacao={stateTimerOperacao}
+              sec={stateTimer.sec}  />       
+          </section>
+
+          <section className="actions">
+            <Button onClick={actionPlay} className='marginRightLg' label={'Play'} variant='secondary'/>
+            <Button onClick={actionPause} label={'Pause'} variant='outline'/>
+            <Button onClick={actionStop} label={'Parar'} variant='outline'/>
+          </section>
+          
         </div>
-        <div className="actions">
-          <Button onClick={actionPlay} className='marginRightLg' label={'Play'} variant='secondary'/>
-          <Button onClick={actionPause} label={'Pause'} variant='outline'/>
-        </div>
-        <Alert variant='success' isShow={true} title='Titulo' description='Esta descricao é para ver' />
+        
       </div>
 
     </>
