@@ -1,0 +1,86 @@
+
+
+.circle-timer-bg {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.circle-timer-bg span {
+  top: 106px;
+  left: 78px;
+  color: var(--text-color-pink-light);
+  font-size: 64px;
+  position: absolute;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.circle-svg-shadow {
+  display: block;
+  fill: transparent;
+  stroke: #d4cece;
+  stroke-width: 2;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+}
+
+.circle-timer-bg-svg {
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: svg-animation;
+}
+.circle-timer-bg-svg-circle {
+  max-width: 100px;
+  display: block;
+  fill: transparent;
+  stroke: var(--secondary-color-dark);
+  stroke-width: 2;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 280;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  
+}
+
+.circle-animation-off {
+  animation: none;
+}
+
+.circle-animation-25-min {
+  animation-duration: 1500s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-name: circle-animation;
+}
+.circle-animation-15-min {
+  animation-duration: 900s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-name: circle-animation;
+}
+.circle-animation-5-min {
+  animation-duration: 300s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-name: circle-animation;
+}
+
+@keyframes circle-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 283;
+  }
+
+}
+
+
+
+
+

@@ -1,0 +1,28 @@
+
+.inputContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContent input {
+  width: 100%;
+  min-width: 280px;
+  height: 36px;
+  margin: 0px;
+  border-radius: 4px;
+  border: solid 1px #ff5c8d;
+  font-size: 14px;
+  padding: 0px 8px;
+}
+
+.inputContent input:focus, input:focus-within{
+  border: solid 2px #ff5c8d;
+  outline: none;
+}
+
+.inputContent span {
+  color: rgb(156, 35, 35);
+  margin-left: 4px;
+  height: 16px;
+  font-size: 11px;
+}

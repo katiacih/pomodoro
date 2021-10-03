@@ -1,0 +1,33 @@
+
+.content {
+
+}
+
+.content-timer {
+  
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  .contentTaskTimer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tasks {
+    margin-right: 0px;
+  }
+}
+
+/* tablet  */
+@media only screen and (min-width: 490px) and (max-width: 768px) {
+  .contentTaskTimer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tasks {
+    margin-right: 0px;
+  }
+}

@@ -1,7 +1,8 @@
 
 .App {
+  /* height: 100vh; */
+  /* height: 100%; */
   padding: 16px 24px;
-  height: 100vh;
 }
 
 .themeLight {
@@ -13,6 +14,12 @@
 
 .themeDark {
   background: linear-gradient(0deg, rgba(100,44,71,1) 12%, rgba(15,32,39,1) 53%);
+}
+
+.contentTaskTimer {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
 }
 
 .tasks {

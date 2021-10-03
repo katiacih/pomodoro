@@ -1,0 +1,71 @@
+
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.select select {
+  font-family: 'Arial';
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--secondary-color);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: var(--secondary-color-dark);
+  background: #f5e8ea;
+}
+
+.select select::selection {
+  background-color: greenyellow;
+}
+.select select option:checked {
+  background-color: var(--secondary-color-dark);
+  color: var(--bg-white);
+}
+
+.select select option:not(:checked) {
+  height: 36px !important;
+  background-color: #f5e8ea !important;
+}
+
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select_arrow {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  width: 0px;
+  height: 0px;
+  border: solid var(--secondary-color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+  border-color: var(--secondary-color-dark);
+}
+.select select:disabled ~ .select_arrow {
+  border-top-color: var(--text-color-gray);
+}

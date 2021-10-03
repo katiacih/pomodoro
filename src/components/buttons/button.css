@@ -3,7 +3,8 @@
 .button {
   padding: 4px 16px;
   border-radius: 5px;
-  height: 24px;
+  min-width: 64px;
+  height: 36px;
   font-size: 12px;
   
   color: #fff;
@@ -11,6 +12,28 @@
   -webkit-box-shadow: 0 1px 2px -1px black;
   -moz-box-shadow: 0 1px 2px -1px black;
   box-shadow: 0 1px 2px -1px black;
+}
+
+.link {
+  border: none;
+  background: transparent;
+  color: var(--secondary-color);
+  box-shadow: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--secondary-color-dark);
+}
+
+.link:focus {
+  color: var(--secondary-color-dark);
+}
+
+.link:active {
+  color: var(--secondary-color-dark);
 }
 
 .btnPrimary {

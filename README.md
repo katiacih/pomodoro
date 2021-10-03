@@ -1,3 +1,11 @@
+[![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
+[![TypeScript](https://img.shields.io/badge/--3178C6?logo=typescript&logoColor=ffffff)](https://www.typescriptlang.org/)
+
+
+![Your Repository’s Stats](https://github-readme-stats.vercel.app/api?username=katiacih&show_icons=true)
+
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=katiacih&theme=blue-green)
+
 
 # Pomodoro - Com tasks 
 
@@ -19,11 +27,11 @@ Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro,
 - [x] Arquivo ReadMe
 - [x] Inclusão de tema light/dark
 - [x] Componentes
+- [X] Responsividade
+- [X] Tasks
+- [X] Gerenciador de estados
+- [X] Cronometro do pomodoro
 - [ ] Testes unitários
-- [ ] Responsividade
-- [ ] Tasks
-- [ ] Gerenciador de estados
-- [ ] Cronometro do pomodoro
 - [ ] Testes de integração
 
 
@@ -82,3 +90,8 @@ More (https://recoiljs.org/)
 # Autor   
 
 Kátia Cibele 🚀
+
+
+
+## 😂 Here is a random joke that'll make you laugh!
+![Jokes Card](https://readme-jokes.vercel.app/api)

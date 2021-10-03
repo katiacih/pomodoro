@@ -1,0 +1,25 @@
+h2, p {
+  margin: 0px;
+}
+
+.header p {
+  color: var(--text-color-gray);
+  font-size: 14px !important;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+.header h3 {
+  margin: 0px;
+}
+
+.addtasks {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+
+
+

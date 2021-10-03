@@ -1,0 +1,68 @@
+h2, p {
+  margin: 0px;
+}
+
+.header p {
+  color: var(--text-color-gray);
+}
+
+.header {
+  margin-bottom: 36px;
+}
+
+.addtasks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+h2, p {
+  margin: 0px;
+}
+
+.header p {
+  color: var(--text-color-gray);
+  font-size: 11px;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+.header h3 {
+  margin: 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.action-top {
+  height: 60px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.action-top-select {
+  width: 180px !important;
+}
+
+.content-timer {
+  display: flex;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.actions {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions button {
+  margin-right: 12px;
+}
+

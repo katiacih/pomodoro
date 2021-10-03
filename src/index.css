@@ -14,6 +14,7 @@ body {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+  height: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -40,7 +41,7 @@ code {
   --primary-color-dark: #2D01A7;
 
   --secondary-color:#D81B60;
-  --secondary-color-light: #F5C5CC;
+  --secondary-color-light: #e48291;
   --secondary-color-dark: #A00037;
 
   --text-color-white-light: #F5C5CC;
@@ -55,4 +56,13 @@ code {
  
   --disabled: #E5E5E5;
   --text-disabled: #727272;
+
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
  }
+
+.marginRightLg {
+  margin-right: var(--spacing-lg);
+}

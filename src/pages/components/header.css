@@ -1,0 +1,38 @@
+
+.titlePomodoro {
+  margin: 0px;
+  font-size: max(36px, 5vw);
+  color: var(--text-color-white-light);
+}
+
+.actionThemeContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle{
+  color: var(--text-color-white-light);
+  margin: 0px;
+  font-size: 14px;
+}
+
+.headerActions {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px){
+  .headerContent {
+    flex-direction: column;
+  }
+  .headerActions {
+    margin-top: 10px;
+  }
+}

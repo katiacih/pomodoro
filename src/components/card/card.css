@@ -1,0 +1,24 @@
+
+.card {
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 8px 16px;
+  margin: 20px 0px;
+  width: 480px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 320px; 
+  }
+}
+
+/* tablet  */
+@media only screen and (min-width: 490px) and (max-width: 768px) {
+  .card {
+    width: 600px; 
+  }
+}
+

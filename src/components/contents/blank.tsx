@@ -1,12 +1,11 @@
 import React from 'react';
-import { BiConfused } from 'react-icons/bi'
 import './blank.css';
 
 const Blank: React.FC = () => {
   return (
     <div className="contentBlank">
-      <BiConfused />
-      <p>Sem dados</p>
+      <p>Digite uma tarefa para fazer </p>
+      <p>e clique em <strong>Adicionar Tarefa</strong></p>
     </div>
   );
 }
