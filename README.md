@@ -37,7 +37,10 @@ Esse projeto tem como objetivo fornecer o uso controlado da tecnica do pomodoro,
 
 ### Demonstração 
 
-🚧   🚀 Em construção...  🚧   
+![gif](https://github.com/katiacih/pomodoro/tree/main/Demonstracao/demopomodoro.gif)
+
+![gif](Demonstracao/demopomodoro.gif)
+
 
 ### 🛠 Tecnologias
 
