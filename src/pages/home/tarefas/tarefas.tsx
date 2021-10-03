@@ -44,7 +44,7 @@ const Tarefas: React.FC = () => {
       <TextField value={newTask} onChange={onChangeNewTask} msgError={errorText}/>
     
       <div className="addtasks">
-        <Button label="Adicionar Tarefas" onClick={() => addNewTask()}
+        <Button label="Adicionar Tarefa" onClick={() => addNewTask()}
           />
       </div>
 

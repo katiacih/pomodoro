@@ -5,7 +5,7 @@ const Blank: React.FC = () => {
   return (
     <div className="contentBlank">
       <p>Digite uma tarefa para fazer </p>
-      <p>e clique em <strong>Add Task</strong></p>
+      <p>e clique em <strong>Adicionar Tarefa</strong></p>
     </div>
   );
 }
