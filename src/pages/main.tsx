@@ -52,7 +52,7 @@ const Main: React.FC = () => {
             <RecoilRoot>
               <Home/>
             </RecoilRoot>
-          : <ComoFunciona/>
+          : <div style={{ display: 'flex', justifyContent: 'center'}}><ComoFunciona/></div>
       }
       
     </div>

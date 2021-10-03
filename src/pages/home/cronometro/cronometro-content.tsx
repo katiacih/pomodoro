@@ -3,40 +3,44 @@ import { ComboBox } from 'components/combo-box/combo-box'
 import './cronometro-content.css'
 import Button from 'components/buttons/button'
 import CircleTimer from './components/circle-timer'
+import { MyTimerContext, TypeOperacao, TypeOptions } from '../../../context/timer'
 
 const CronometroContent: React.FC = () => {
+
+  const [minOption, setOption] = useState<TypeOptions>(25)
+  const [operacao, setOperacao] = useState<TypeOperacao>('Stop')
 
   const [stateDuracao, SetStateDuracao] = useState({
     value: '1',
     label: '25 minutos'
   })
-  const [stateTimerOperacao, setStateTimerOperacao] = useState<'Play' | 'Stop' | 'Pause' | 'Restart'>('Stop')
-  const [stateTimer, setStateTimer] = useState({
-    min: 25,
-    sec: 0
-  })
 
   const actionPlay = (): void => {
-    setStateTimerOperacao('Play')
-    
+    setOperacao('Play')
   }
-  const actionPause = (): void => {
-    setStateTimerOperacao('Pause')
-  }
+  // const actionPause = (): void => {
+  //   setOperacao('Pause')
+  // }
 
   const actionStop = (): void => {
-    setStateTimerOperacao('Stop')
+    setOperacao('Stop')
+    if(stateDuracao.value === '1') { 
+      setOption(25)
+    }
+    if(stateDuracao.value === '2'){
+      setOption(15)
+    }
+    if(stateDuracao.value === '3') {
+      setOption(5)
+    }
     
-    setStateTimer({
-      min: stateDuracao.value === '1' ? 25 
-      : stateDuracao.value === '2' ? 15
-      : 5,
-      sec: 0
-    })
   }
 
   const resetar = (): void => {
-    onChangeDuracao('25 minutos', '1')
+    if(stateDuracao.value === '1')  onChangeDuracao('25 minutos', '1')
+    else if(stateDuracao.value === '2')  onChangeDuracao('15 minutos', '2')
+    else if(stateDuracao.value === '3')  onChangeDuracao('5 minutos', '3')
+    actionStop()
   }
 
   const atualizaDuracao = useCallback((optionLabel: string, optionValue: string): void => onChangeDuracao(optionLabel, optionValue), [])
@@ -45,22 +49,25 @@ const CronometroContent: React.FC = () => {
   const onChangeDuracao = (optionLabel: string, optionValue: string)=> {
     SetStateDuracao({ label: optionLabel, value: optionValue })
 
-    if(optionValue === '1') setStateTimer({
-      min: 25,
-      sec: 0
-    })
-    if(optionValue === '2') setStateTimer({
-      min: 15,
-      sec: 0
-    })
-    if(optionValue === '3') setStateTimer({
-      min: 5,
-      sec: 0
-    })
+    if(optionValue === '1') { 
+      setOption(25)
+    }
+    if(optionValue === '2'){
+      setOption(15)
+    }
+    if(optionValue === '3') {
+      setOption(5)
+    }
+    
   }
 
   return (
-    <>
+    <MyTimerContext.Provider value={{
+      minOption, 
+      operacao,
+      setOperacao,
+      setOption
+    }}>
       <div className='header'>
         <div className="content">
           <section className="action-top">
@@ -81,15 +88,12 @@ const CronometroContent: React.FC = () => {
             />
           </section>
           <section className="content-timer">
-            <CircleTimer  
-              min={stateTimer.min} 
-              operacao={stateTimerOperacao}
-              sec={stateTimer.sec}  />       
+            <CircleTimer  resetar={resetar}/>       
           </section>
 
           <section className="actions">
             <Button onClick={actionPlay} className='marginRightLg' label={'Play'} variant='secondary'/>
-            <Button onClick={actionPause} label={'Pause'} variant='outline'/>
+            {/* <Button onClick={actionPause} label={'Pause'} variant='outline'/> */}
             <Button onClick={actionStop} label={'Parar'} variant='outline'/>
           </section>
           
@@ -97,7 +101,7 @@ const CronometroContent: React.FC = () => {
         
       </div>
 
-    </>
+    </MyTimerContext.Provider>
   );
 }
 export default CronometroContent;
